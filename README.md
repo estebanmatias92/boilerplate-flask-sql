@@ -14,7 +14,6 @@ Es una simple app web de tareas (TO-DO), hecha en Flask + Bootstrap + SQlite3.
 - La configuracion de la base de datos se encuentra en 'db/database.py'
 - 'static' no esta siendo usado en este caso, por el uso de bootstrap desde un CDN, pero esta disponible
 
-
 ## Instalacion
 
 Deben instalar desde la consola la libreria Pygame (asegurense de tener actualizado PIP)
@@ -57,7 +56,7 @@ pip install -Ur .\requirements.txt
 Como cualquier script o programa de python.
 
 ```bash
-python "main.py"
+python "app.py"
 ```
 
 *Para correrlo sin mencionar el directorio, la consola debe estar posicionada sobre la carpeta del proyecto.
