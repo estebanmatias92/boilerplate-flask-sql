@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Todo List</h1>
+        <form method="POST">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="task" placeholder="New Task" required>
+                <div class="input-group-append">
+                    <input class="btn btn-outline-primary" type="submit" value="Add Task">
+                </div>
+            </div>
+        </form>
+        {% for task in tasks %}
+        <div class="alert alert-light" role="alert">
+            <span>{{ task.task }}</span>
+            <a class="btn btn-outline-info btn-sm" href="{{ url_for('todo_route.update', id=task.id) }}">Edit</a>
+            <a class="btn btn-outline-danger btn-sm" href="{{ url_for('todo_route.delete', id=task.id) }}">Delete</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+</html>

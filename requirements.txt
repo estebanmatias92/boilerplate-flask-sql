@@ -1,2 +1,2 @@
-tk
-spotipy
+flask
+flask_sqlalchemy
